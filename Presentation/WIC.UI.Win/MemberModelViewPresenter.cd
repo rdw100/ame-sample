@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="MVP is a user interface architectural pattern engineered to facilitate automated unit testing and improve the separation of concerns in presentation logic:&#xD;&#xA;&#xD;&#xA;The MODEL is an interface defining the data to be displayed or otherwise acted upon in the user interface.&#xD;&#xA;&#xD;&#xA;The PRESENTER acts upon the model and the view. It retrieves data from repositories (the model), and formats it for display in the view.&#xD;&#xA;&#xD;&#xA;The VIEW is a passive interface that displays data (the model) and routes user commands (events) to the presenter to act upon that data.&#xD;&#xA;&#xD;&#xA;Source: wikipedia">
+    <Position X="0.531" Y="4.948" Height="2.667" Width="3.898" />
+  </Comment>
+  <Class Name="WIC.UI.Win.Models.Model">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Models\Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WIC.UI.Win.Presenters.Presenter&lt;T&gt;">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Presenters\Presenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WIC.UI.Win.Presenters.MemberPresenter">
+    <Position X="2.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presenters\MemberPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WIC.UI.Win.FormMember">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAQAIKAACAAAAEIAACACVACJgAAABAiAAACBAIAAAA=</HashCode>
+      <FileName>FormMember.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WIC.UI.Win.Models.IModel">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WIC.UI.Win.Views.IMemberView">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAACQAAIAAAAAACAAAABAAAAAA=</HashCode>
+      <FileName>Views\IMemberView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WIC.UI.Win.Views.IView" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\IView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
