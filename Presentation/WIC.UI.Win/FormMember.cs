@@ -61,7 +61,7 @@ namespace WIC.UI.Win
         private void btnSave_Click(object sender, EventArgs e)
         {
             memberPresenter.Save();
-            btnSave.Enabled = false;
+            btnSave.Enabled = false; // For now, one save only.
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
