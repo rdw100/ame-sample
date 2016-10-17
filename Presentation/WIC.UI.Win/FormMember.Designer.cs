@@ -34,12 +34,12 @@
             this.lblState = new System.Windows.Forms.Label();
             this.lblZip = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtState = new System.Windows.Forms.TextBox();
             this.txtZIP = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtMemberName = new System.Windows.Forms.TextBox();
+            this.cboState = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnSave
@@ -95,13 +95,6 @@
             this.txtCity.Size = new System.Drawing.Size(168, 20);
             this.txtCity.TabIndex = 2;
             // 
-            // txtState
-            // 
-            this.txtState.Location = new System.Drawing.Point(108, 103);
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(84, 20);
-            this.txtState.TabIndex = 3;
-            // 
             // txtZIP
             // 
             this.txtZIP.Location = new System.Drawing.Point(108, 129);
@@ -142,17 +135,26 @@
             this.txtMemberName.Size = new System.Drawing.Size(100, 20);
             this.txtMemberName.TabIndex = 0;
             // 
+            // cboState
+            // 
+            this.cboState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboState.FormattingEnabled = true;
+            this.cboState.Location = new System.Drawing.Point(109, 103);
+            this.cboState.Name = "cboState";
+            this.cboState.Size = new System.Drawing.Size(40, 21);
+            this.cboState.TabIndex = 14;
+            // 
             // FormMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 221);
+            this.Controls.Add(this.cboState);
             this.Controls.Add(this.txtMemberName);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtZIP);
-            this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.lblZip);
             this.Controls.Add(this.lblState);
@@ -174,11 +176,11 @@
         private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.Label lblZip;
         private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtZIP;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtMemberName;
+        private System.Windows.Forms.ComboBox cboState;
     }
 }

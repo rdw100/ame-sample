@@ -114,6 +114,10 @@
       <Project>{4fa32b13-4f57-4bcb-be1a-533524a150f8}</Project>
       <Name>WIC.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WIC.UI.Process\WIC.UI.Process.csproj">
+      <Project>{54ad056e-4025-4052-a0cb-65fd44942465}</Project>
+      <Name>WIC.UI.Process</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

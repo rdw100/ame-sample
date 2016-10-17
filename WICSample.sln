@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIC.Test", "WIC.Test\WIC.Te
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WIC.Database", "Data\WIC.Database\WIC.Database.sqlproj", "{4FDFFBCC-4F7B-44F0-9BF3-74A7E8F862BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIC.UI.Process", "Presentation\WIC.UI.Process\WIC.UI.Process.csproj", "{54AD056E-4025-4052-A0CB-65FD44942465}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{4FDFFBCC-4F7B-44F0-9BF3-74A7E8F862BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FDFFBCC-4F7B-44F0-9BF3-74A7E8F862BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FDFFBCC-4F7B-44F0-9BF3-74A7E8F862BD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{54AD056E-4025-4052-A0CB-65FD44942465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54AD056E-4025-4052-A0CB-65FD44942465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54AD056E-4025-4052-A0CB-65FD44942465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54AD056E-4025-4052-A0CB-65FD44942465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +90,7 @@ Global
 		{72CC5543-A58D-43C8-834E-FBE06C10A5CA} = {6897DDCC-E1D2-4D57-BC78-BE00F91F1E97}
 		{54530117-C1DB-4DBD-8B17-D72F760A8669} = {1C2258E0-7918-4ABD-9DD0-BC3C6BD91BC8}
 		{4FDFFBCC-4F7B-44F0-9BF3-74A7E8F862BD} = {9E6ED3C0-201D-44AB-B757-FA6C57D37E62}
+		{54AD056E-4025-4052-A0CB-65FD44942465} = {3F6CC53A-AFDA-4721-A5BF-431B368122F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45

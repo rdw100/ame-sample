@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using WIC.UI.Win.Presenters;
 using WIC.UI.Win.Views;
+using WIC.UI.Process;
 
 namespace WIC.UI.Win
 {
@@ -20,14 +21,14 @@ namespace WIC.UI.Win
         public FormMember()
         {
             InitializeComponent();
+            InitializeApply();
 
             // initialize presenter.
-
             memberPresenter = new MemberPresenter(this);
         }
 
         public int MemberId { get; set; }
-        
+
         public string MemberName
         {
             get { return txtMemberName.Text.Trim(); }
@@ -39,7 +40,7 @@ namespace WIC.UI.Win
             get { return txtAddress.Text.Trim(); }
             set { txtAddress.Text = value; }
         }
-        
+
         public string City
         {
             get { return txtCity.Text.Trim(); }
@@ -48,8 +49,8 @@ namespace WIC.UI.Win
 
         public string State
         {
-            get { return txtState.Text.Trim(); }
-            set { txtState.Text = value; }
+            get { return cboState.SelectedValue.ToString(); }
+            set { cboState.SelectedValue = value; }
         }
 
         public string Zip
@@ -67,6 +68,11 @@ namespace WIC.UI.Win
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+        private void InitializeApply()
+        {
+            cboState.DataSource = MemberController.GetStates();
         }
     }
 }
