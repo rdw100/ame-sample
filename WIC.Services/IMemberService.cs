@@ -19,8 +19,8 @@ namespace WIC.Services.Contracts
         void InsertMember(Member member);
 
         [OperationContract]
-        void UpdateMember(Member member);        
-        
+        void UpdateMember(Member member);
+
         //Member GetMemberById(Guid memberId);
     }
 }

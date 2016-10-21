@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WIC.UI.Win.Views
 {
-    // marker interface, no members
+    // marker interface
     public interface IView
-    {
-        // No members..
+    {        
+        bool IsValid { get; set; }
     }
 }

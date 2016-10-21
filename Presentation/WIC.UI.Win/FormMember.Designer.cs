@@ -40,6 +40,7 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtMemberName = new System.Windows.Forms.TextBox();
             this.cboState = new System.Windows.Forms.ComboBox();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSave
@@ -100,7 +101,7 @@
             this.txtZIP.Location = new System.Drawing.Point(108, 129);
             this.txtZIP.Name = "txtZIP";
             this.txtZIP.Size = new System.Drawing.Size(84, 20);
-            this.txtZIP.TabIndex = 4;
+            this.txtZIP.TabIndex = 5;
             // 
             // btnCancel
             // 
@@ -142,13 +143,23 @@
             this.cboState.Location = new System.Drawing.Point(109, 103);
             this.cboState.Name = "cboState";
             this.cboState.Size = new System.Drawing.Size(40, 21);
-            this.cboState.TabIndex = 14;
+            this.cboState.TabIndex = 4;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.ForeColor = System.Drawing.Color.Black;
+            this.lblMessage.Location = new System.Drawing.Point(46, 214);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblMessage.TabIndex = 15;
             // 
             // FormMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 221);
+            this.ClientSize = new System.Drawing.Size(297, 246);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.cboState);
             this.Controls.Add(this.txtMemberName);
             this.Controls.Add(this.lblAddress);
@@ -182,5 +193,6 @@
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtMemberName;
         private System.Windows.Forms.ComboBox cboState;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

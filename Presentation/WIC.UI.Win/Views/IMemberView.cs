@@ -16,5 +16,7 @@ namespace WIC.UI.Win.Views
         string City { get; set; }
         string State { get; set; }
         string Zip { get; set; }
+        void ShowMessage(string Message);
+        event EventHandler<EventArgs> Save;
     }
 }

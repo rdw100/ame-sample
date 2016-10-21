@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMemberService.cs" />
     <Compile Include="MemberService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,10 +53,6 @@
     <ProjectReference Include="..\WIC.Entities\WIC.Entities.csproj">
       <Project>{20d751c9-2819-4572-b05c-007d92b19c62}</Project>
       <Name>WIC.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WIC.Services.Contracts\WIC.Services.Contracts.csproj">
-      <Project>{72cc5543-a58d-43c8-834e-fbe06c10a5ca}</Project>
-      <Name>WIC.Services.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{72CC5543-A58D-43C8-834E-FBE06C10A5CA}</ProjectGuid>
+    <ProjectGuid>{BFAE8BAD-7C15-44C1-81D1-EDA86EC83476}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WIC.Services.Contracts</RootNamespace>
-    <AssemblyName>WIC.Services.Contracts</AssemblyName>
+    <RootNamespace>WIC.Framework</RootNamespace>
+    <AssemblyName>WIC.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,8 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,14 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMemberService.cs" />
+    <Compile Include="ValidationObject.cs" />
+    <Compile Include="ValidationRules\ValidateRequired.cs" />
+    <Compile Include="ValidationRules\ValidateZip.cs" />
+    <Compile Include="ValidationRules\ValidationRule.cs" />
+    <Compile Include="ValidationRules\ValidateLength.cs" />
+    <Compile Include="ValidationRules\ValidateRegEx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WIC.Entities\WIC.Entities.csproj">
-      <Project>{20d751c9-2819-4572-b05c-007d92b19c62}</Project>
-      <Name>WIC.Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

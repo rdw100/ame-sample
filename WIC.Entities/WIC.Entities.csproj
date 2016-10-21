@@ -47,6 +47,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="States.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WIC.Framework\WIC.Framework.csproj">
+      <Project>{bfae8bad-7c15-44c1-81d1-eda86ec83476}</Project>
+      <Name>WIC.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

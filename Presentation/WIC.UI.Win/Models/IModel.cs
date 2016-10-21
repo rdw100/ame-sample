@@ -9,10 +9,10 @@ using WIC.UI.Win.Models;
 namespace WIC.UI.Win.Models
 {
     // IModel interface, part of MVP design pattern. 
-
     public interface IModel
     {
         void AddMember(MemberModel member);
         void UpdateMember(MemberModel member);
+        List<string> GetBrokenRules(MemberModel member);
     }
 }

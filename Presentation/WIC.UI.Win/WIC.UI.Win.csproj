@@ -110,6 +110,10 @@
       <Project>{20d751c9-2819-4572-b05c-007d92b19c62}</Project>
       <Name>WIC.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\WIC.Framework\WIC.Framework.csproj">
+      <Project>{bfae8bad-7c15-44c1-81d1-eda86ec83476}</Project>
+      <Name>WIC.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\WIC.Services\WIC.Services.csproj">
       <Project>{4fa32b13-4f57-4bcb-be1a-533524a150f8}</Project>
       <Name>WIC.Services</Name>

@@ -18,9 +18,11 @@ namespace WIC.UI.Win
     {
         private MemberPresenter memberPresenter;
 
+        public event EventHandler<EventArgs> Save;
+
         public FormMember()
         {
-            InitializeComponent();
+            InitializeComponent();            
             InitializeApply();
 
             // initialize presenter.
@@ -59,11 +61,76 @@ namespace WIC.UI.Win
             set { txtZIP.Text = value; }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void ShowMessage(string message)
         {
-            memberPresenter.Save();
-            btnSave.Enabled = false; // For now, one save only.
+            MessageBox.Show(message);
         }
+
+        public bool IsValid { get; set; }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validate View using model
+                memberPresenter.isValidMember();
+
+                if (IsValid)
+                {
+                    //memberPresenter.Save();
+                    Save?.Invoke(this, EventArgs.Empty);
+
+                    // For now, one save only.
+                    btnSave.Enabled = false;
+                    lblMessage.Text = "Saved successfully!";
+                    lblMessage.ForeColor = Color.Green;
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowMessage(ex.Message);
+            }
+            
+        }
+
+        //private void btnSave_Click(object sender, EventArgs e)
+        //{            
+        //    // Validate View using model
+        //    memberPresenter.isValidMember();
+
+        //    if (IsValid)
+        //    {
+        //        memberPresenter.Save();
+
+        //        // For now, one save only.
+        //        btnSave.Enabled = false;
+        //        lblMessage.Text = "Saved successfully!";
+        //        lblMessage.ForeColor = Color.Green;
+        //    }
+        //}
+
+        //private void mView_Save(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        // Validate View using model
+        //        memberPresenter.isValidMember();
+
+        //        if (IsValid)
+        //        {
+        //            memberPresenter.Save();
+
+        //            // For now, one save only.
+        //            btnSave.Enabled = false;
+        //            lblMessage.Text = "Saved successfully!";
+        //            lblMessage.ForeColor = Color.Green;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ShowMessage(ex.Message);
+        //    }
+        //}
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

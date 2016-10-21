@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WIC.Services.Contracts")]
+[assembly: AssemblyTitle("WIC.Framework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hewlett-Packard Company")]
-[assembly: AssemblyProduct("WIC.Services.Contracts")]
+[assembly: AssemblyProduct("WIC.Framework")]
 [assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("72cc5543-a58d-43c8-834e-fbe06c10a5ca")]
+[assembly: Guid("bfae8bad-7c15-44c1-81d1-eda86ec83476")]
 
 // Version information for an assembly consists of the following four values:
 //
