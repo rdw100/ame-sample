@@ -25,16 +25,23 @@ namespace WIC.UI.Win
             InitializeComponent();            
             InitializeApply();
 
-            // initialize presenter.
+            // Initialize Member presenter.
             memberPresenter = new MemberPresenter(this);
+
         }
 
         public int MemberId { get; set; }
 
-        public string MemberName
+        public string FirstName
         {
-            get { return txtMemberName.Text.Trim(); }
-            set { txtMemberName.Text = value; }
+            get { return txtFirstName.Text.Trim(); }
+            set { txtFirstName.Text = value; }
+        }
+
+        public string LastName
+        {
+            get { return txtLastName.Text.Trim(); }
+            set { txtLastName.Text = value; }
         }
 
         public string Address
@@ -76,8 +83,8 @@ namespace WIC.UI.Win
                 memberPresenter.isValidMember();
 
                 if (IsValid)
-                {
-                    //memberPresenter.Save();
+                {                    
+                    // IDE1005: Simplified delegation invoke of presenter method.
                     Save?.Invoke(this, EventArgs.Empty);
 
                     // For now, one save only.
@@ -89,56 +96,18 @@ namespace WIC.UI.Win
             catch (Exception ex)
             {
                 ShowMessage(ex.Message);
-            }
-            
+            }            
         }
-
-        //private void btnSave_Click(object sender, EventArgs e)
-        //{            
-        //    // Validate View using model
-        //    memberPresenter.isValidMember();
-
-        //    if (IsValid)
-        //    {
-        //        memberPresenter.Save();
-
-        //        // For now, one save only.
-        //        btnSave.Enabled = false;
-        //        lblMessage.Text = "Saved successfully!";
-        //        lblMessage.ForeColor = Color.Green;
-        //    }
-        //}
-
-        //private void mView_Save(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        // Validate View using model
-        //        memberPresenter.isValidMember();
-
-        //        if (IsValid)
-        //        {
-        //            memberPresenter.Save();
-
-        //            // For now, one save only.
-        //            btnSave.Enabled = false;
-        //            lblMessage.Text = "Saved successfully!";
-        //            lblMessage.ForeColor = Color.Green;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ShowMessage(ex.Message);
-        //    }
-        //}
-
+        
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            // Todo: Create cancel event, handler & delegate.  
             this.Close();
         }
         
         private void InitializeApply()
         {
+            // Todo: Better incorporate list lookup into View and Presenter.  Consider StateCollection : List<State>.
             cboState.DataSource = MemberController.GetStates();
         }
     }

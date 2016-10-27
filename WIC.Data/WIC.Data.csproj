@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessComponent.cs" />
+    <Compile Include="IMemberDAC.cs" />
     <Compile Include="MemberDAC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

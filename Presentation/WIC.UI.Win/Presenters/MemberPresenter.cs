@@ -13,9 +13,10 @@ namespace WIC.UI.Win.Presenters
     /// Member Presenter class.
     /// </summary>
     /// <remarks>
-    /// MV Patterns: MVP design pattern - Supervising Controller.
+    /// MV Patterns: MVP design pattern - Passive View.  With Passive view, the View does no actively update itself.
+    /// This pattern allows for the presenter to be testing in isolation from the UI by mocking the view.
     /// </remarks>
-    public class MemberPresenter : Presenter<IMemberView>
+    public class MemberPresenter
     {
         private IMemberView mView;
 
@@ -24,7 +25,6 @@ namespace WIC.UI.Win.Presenters
         /// </summary>
         /// <param name="view">The view</param>
         public MemberPresenter(IMemberView view)
-            : base(view)
         {
             mView = view;
             Initialize();
@@ -45,21 +45,18 @@ namespace WIC.UI.Win.Presenters
         /// <returns>Number of records affected.</returns>
         private void mView_Save(object sender, EventArgs e)
         {
-            MemberModel member = InitModel();
+            Model model = new Model();
+            MemberModel member = InitModel(mView);
             try
             {
-                if (View.IsValid)
+                if (mView.IsValid)
                 {
-                    Model.AddMember(member);
+                    model.AddMember(member); 
                 }
-                //else
-                //{
-                //    View.IsValid = false;
-                //}
             }
             catch (Exception ex)
             {
-                View.ShowMessage(ex.Message);
+                mView.ShowMessage(ex.Message); 
             }
         }
         
@@ -68,19 +65,20 @@ namespace WIC.UI.Win.Presenters
         /// </summary>
         public void isValidMember()
         {
-            MemberModel member = InitModel();
+            Model model = new Model(); 
+            MemberModel member = InitModel(mView);
 
-            if (Model.GetBrokenRules(member).Count() == 0)
+            if (model.GetBrokenRules(member).Count() == 0) 
             {
-                View.IsValid = true;
+                mView.IsValid = true; 
             }
             else
             {
-                View.IsValid = false;
-                List<string> brokenRules = Model.GetBrokenRules(member);
+                mView.IsValid = false; 
+                List<string> brokenRules = model.GetBrokenRules(member); 
                 foreach (string item in brokenRules)
                 {
-                    View.ShowMessage(item);
+                    mView.ShowMessage(item); 
                 }                
             }
         }
@@ -89,15 +87,16 @@ namespace WIC.UI.Win.Presenters
         /// Initializes model values using view.
         /// </summary>
         /// <returns></returns>
-        private MemberModel InitModel()
+        private MemberModel InitModel(IMemberView view)
         {
             return new MemberModel
             {
-                MemberName = View.MemberName,
-                Address = View.Address,
-                City = View.City,
-                State = View.State,
-                Zip = View.Zip,
+                FirstName = view.FirstName,
+                LastName = view.LastName,
+                Address = view.Address,
+                City = view.City,
+                State = view.State,
+                Zip = view.Zip,
             };
         }
     }

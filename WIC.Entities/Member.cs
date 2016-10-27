@@ -11,15 +11,18 @@ namespace WIC.Entities
     /// <summary>
     /// Household member class implements common elements from base class.  Cannot be inherited at this time.
     /// </summary>
-    public sealed class Member : Person
+    public sealed class Member : ValidationObject //: Person  // Debugging for Automapper
     {
 
         public Member()
         {
             // establish business rules
 
-            AddRule(new ValidateRequired("MemberName"));
-            AddRule(new ValidateLength("MemberName", 1, 40));
+            AddRule(new ValidateRequired("FirstName"));
+            AddRule(new ValidateLength("FirstName", 1, 40));
+
+            AddRule(new ValidateRequired("LastName"));
+            AddRule(new ValidateLength("LastName", 1, 40));
 
             AddRule(new ValidateRequired("Address"));
             AddRule(new ValidateLength("Address", 1, 35));
@@ -32,14 +35,13 @@ namespace WIC.Entities
 
             AddRule(new ValidateRequired("Zip"));
             AddRule(new ValidateLength("Zip", 1, 5));
-            AddRule(new ValidateZip("Zip"));
+            //AddRule(new ValidateZip("Zip"));
         }
-                    
-        public int MemberId { set; get; }
-        public string MemberName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }    
+        public string City { get; set; }      
+        public string State { get; set; }          
         public string Address { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
         public string Zip { get; set; }        
     }
 }

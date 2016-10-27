@@ -11,7 +11,7 @@ using WIC.Entities;
 
 namespace WIC.Data
 {
-    public class MemberDAC: DataAccessComponent
+    public class MemberDAC : DataAccessComponent, IMemberDAC
     {
         /// <summary>
         /// Inserts a new row in the Members table.
@@ -21,21 +21,29 @@ namespace WIC.Data
         public void InsertMember(Member member)
         {
             const string SQL_STATEMENT =
-                "INSERT INTO dbo.Members ([Name], [Address], [City], [State], [Zip]) " +
-                "VALUES(@Name, @Address, @City, @State, @Zip);"; 
+                "INSERT INTO dbo.Members (" +
+                    "[FirstName], " +
+                    "[LastName], " +
+                    "[Address], " +
+                    "[City], " +
+                    "[State], " +
+                    "[Zip]" +
+                        ") " +
+                "VALUES(@FirstName, @LastName, @Address, @City, @State, @Zip);"; 
 
             // Connect to database.
             Database db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
             {
                 // Set parameter values.
-                db.AddInParameter(cmd, "@Name", DbType.AnsiString, member.MemberName);
+                db.AddInParameter(cmd, "@FirstName", DbType.AnsiString, member.FirstName);
+                db.AddInParameter(cmd, "@LastName", DbType.AnsiString, member.LastName);
                 db.AddInParameter(cmd, "@Address", DbType.AnsiString, member.Address);
                 db.AddInParameter(cmd, "@City", DbType.AnsiString, member.City);
                 db.AddInParameter(cmd, "@State", DbType.AnsiString, member.State);
                 db.AddInParameter(cmd, "@Zip", DbType.AnsiString, member.Zip);
 
-                // Get the primary key value.
+                // Execute SQL.
                db.ExecuteScalar(cmd);
             }            
         }
@@ -49,7 +57,8 @@ namespace WIC.Data
             const string SQL_STATEMENT =
                 "UPDATE dbo.Members " +
                 "SET " +
-                    "[Name]=@Name, " +
+                    "[FirstName]=@FirstName, " +
+                    "[LastName]=@LastName, " +
                     "[Address]=@Address, " +
                     "[City]=@City " +
                     "[State]=@State " +
@@ -61,12 +70,14 @@ namespace WIC.Data
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
             {
                 // Set parameter values.
-                db.AddInParameter(cmd, "@Name", DbType.AnsiString, member.MemberName);
+                db.AddInParameter(cmd, "@FirstName", DbType.AnsiString, member.FirstName);
+                db.AddInParameter(cmd, "@LastName", DbType.AnsiString, member.LastName);
                 db.AddInParameter(cmd, "@Address", DbType.AnsiString, member.Address);
                 db.AddInParameter(cmd, "@City", DbType.AnsiString, member.City);
                 db.AddInParameter(cmd, "@State", DbType.AnsiString, member.State);
                 db.AddInParameter(cmd, "@ZIP", DbType.AnsiString, member.Zip);
 
+                // Execute SQL.
                 db.ExecuteNonQuery(cmd);
             }
         }

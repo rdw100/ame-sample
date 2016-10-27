@@ -1,10 +1,18 @@
 ﻿CREATE TABLE [dbo].[Members] (
-    [Id]      UNIQUEIDENTIFIER NOT NULL,
-    [Name]    VARCHAR (35)     NULL,
-    [Address] VARCHAR (35)     NULL,
-    [City]    VARCHAR (35)     NULL,
-    [State]   VARCHAR (35)     NULL,
-    [ZIP]     VARCHAR (10)     NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
+    [MemberId]  INT          IDENTITY (1, 1) NOT NULL,
+    [FirstName] VARCHAR (35) NULL,
+    [LastName]  VARCHAR (35) NULL,
+    [Address]   VARCHAR (35) NULL,
+    [City]      VARCHAR (35) NULL,
+    [State]     VARCHAR (35) NULL,
+    [ZIP]       VARCHAR (10) NULL,
+    CONSTRAINT [PK_MEMBER] PRIMARY KEY CLUSTERED ([MemberId] ASC)
 );
+
+
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [PrimaryKey]
+    ON [dbo].[Members]([MemberId] ASC);
 
