@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WIC.Framework.ValidationRules
 {
-    // length validation rule. 
-    // length must be between given min and max values
-
+    /// <summary>
+    ///  Validates length.  Length must be between given min and max values
+    /// </summary>
     public class ValidateLength : ValidationRule
     {
         private int _min;

@@ -11,9 +11,8 @@ namespace WIC.Entities
     /// <summary>
     /// Household member class implements common elements from base class.  Cannot be inherited at this time.
     /// </summary>
-    public sealed class Member : ValidationObject //: Person  // Debugging for Automapper
+    public sealed class Member : Person
     {
-
         public Member()
         {
             // establish business rules
@@ -37,8 +36,6 @@ namespace WIC.Entities
             AddRule(new ValidateLength("Zip", 1, 5));
             //AddRule(new ValidateZip("Zip"));
         }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }    
         public string City { get; set; }      
         public string State { get; set; }          
         public string Address { get; set; }

@@ -22,12 +22,11 @@ namespace WIC.UI.Win
 
         public FormMember()
         {
-            InitializeComponent();            
+            InitializeComponent();
             InitializeApply();
 
             // Initialize Member presenter.
             memberPresenter = new MemberPresenter(this);
-
         }
 
         public int MemberId { get; set; }
@@ -83,7 +82,7 @@ namespace WIC.UI.Win
                 memberPresenter.isValidMember();
 
                 if (IsValid)
-                {                    
+                {
                     // IDE1005: Simplified delegation invoke of presenter method.
                     Save?.Invoke(this, EventArgs.Empty);
 
@@ -96,15 +95,15 @@ namespace WIC.UI.Win
             catch (Exception ex)
             {
                 ShowMessage(ex.Message);
-            }            
+            }
         }
-        
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             // Todo: Create cancel event, handler & delegate.  
             this.Close();
         }
-        
+
         private void InitializeApply()
         {
             // Todo: Better incorporate list lookup into View and Presenter.  Consider StateCollection : List<State>.

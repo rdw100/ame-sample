@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WIC.Framework.ValidationRules
 {
-    // abstract base class for input validation rules. 
-    // maintains property name to which rule applies and validation error message
-
+    /// <summary>
+    /// Maintains property name to which validation rule applies and validation error message.
+    /// </summary>
     public abstract class ValidationRule
     {
         public string Property { get; set; }
@@ -26,12 +26,18 @@ namespace WIC.Framework.ValidationRules
             Error = error;
         }
 
-        // validation method. To be implemented in derived classes
-
+        /// <summary>
+        /// Implements validation method in derived classes.
+        /// </summary>
+        /// <param name="validationObject">Object to be validated</param>
+        /// <returns>True if rules rules satisfied, false if not.</returns>
         public abstract bool Validate(ValidationObject validationObject);
 
-        // gets value for given validation object's property using reflection
-
+        /// <summary>
+        /// Gets value for given validation object's property using reflection
+        /// </summary>
+        /// <param name="validationObject"></param>
+        /// <returns></returns>
         protected object GetPropertyValue(ValidationObject validationObject)
         {
             // note: reflection is relatively slow

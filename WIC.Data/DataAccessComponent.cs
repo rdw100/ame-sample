@@ -10,11 +10,11 @@ namespace WIC.Data
     public abstract class DataAccessComponent
     {
         protected const string CONNECTION_NAME = "default";
-                
+
         static DataAccessComponent()
         {
             DatabaseFactory.SetDatabaseProviderFactory(new DatabaseProviderFactory());
-        }             
+        }
 
         protected T GetDataValue<T>(IDataReader dr, string columnName)
         {

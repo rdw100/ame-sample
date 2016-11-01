@@ -16,7 +16,7 @@ namespace WIC.UI.Win.Presenters
     /// MV Patterns: MVP design pattern - Passive View.  With Passive view, the View does no actively update itself.
     /// This pattern allows for the presenter to be testing in isolation from the UI by mocking the view.
     /// </remarks>
-    public class MemberPresenter
+    public class MemberPresenter : Presenter<IMemberView>
     {
         private IMemberView mView;
 
@@ -25,6 +25,7 @@ namespace WIC.UI.Win.Presenters
         /// </summary>
         /// <param name="view">The view</param>
         public MemberPresenter(IMemberView view)
+            : base(view)
         {
             mView = view;
             Initialize();
@@ -51,42 +52,42 @@ namespace WIC.UI.Win.Presenters
             {
                 if (mView.IsValid)
                 {
-                    model.AddMember(member); 
+                    model.AddMember(member);
                 }
             }
             catch (Exception ex)
             {
-                mView.ShowMessage(ex.Message); 
+                mView.ShowMessage(ex.Message);
             }
         }
-        
+
         /// <summary>
         /// Determines whether the Member object passes validation rules.
         /// </summary>
         public void isValidMember()
         {
-            Model model = new Model(); 
+            Model model = new Model();
             MemberModel member = InitModel(mView);
 
-            if (model.GetBrokenRules(member).Count() == 0) 
+            if (model.GetBrokenRules(member).Count() == 0)
             {
-                mView.IsValid = true; 
+                mView.IsValid = true;
             }
             else
             {
-                mView.IsValid = false; 
-                List<string> brokenRules = model.GetBrokenRules(member); 
+                mView.IsValid = false;
+                List<string> brokenRules = model.GetBrokenRules(member);
                 foreach (string item in brokenRules)
                 {
-                    mView.ShowMessage(item); 
-                }                
+                    mView.ShowMessage(item);
+                }
             }
         }
 
         /// <summary>
         /// Initializes model values using view.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Member model pupulated with View values.</returns>
         private MemberModel InitModel(IMemberView view)
         {
             return new MemberModel

@@ -29,7 +29,7 @@ namespace WIC.Data
                     "[State], " +
                     "[Zip]" +
                         ") " +
-                "VALUES(@FirstName, @LastName, @Address, @City, @State, @Zip);"; 
+                "VALUES(@FirstName, @LastName, @Address, @City, @State, @Zip);";
 
             // Connect to database.
             Database db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
@@ -44,8 +44,8 @@ namespace WIC.Data
                 db.AddInParameter(cmd, "@Zip", DbType.AnsiString, member.Zip);
 
                 // Execute SQL.
-               db.ExecuteScalar(cmd);
-            }            
+                db.ExecuteScalar(cmd);
+            }
         }
 
         /// <summary>

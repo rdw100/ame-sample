@@ -7,8 +7,9 @@ using System.Text.RegularExpressions;
 
 namespace WIC.Framework.ValidationRules
 {
-    // base class for regex based validation rules.
-
+    /// <summary>
+    /// Validated regex bases rules.
+    /// </summary>
     public class ValidateRegex : ValidationRule
     {
         protected string Pattern { get; set; }

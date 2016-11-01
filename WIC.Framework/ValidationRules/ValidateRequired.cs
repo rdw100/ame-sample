@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace WIC.Framework.ValidationRules
 {
-    // represents a validation rules that states that a value is required
-
+    /// <summary>
+    /// Represents a validation rules that states that a value is required.
+    /// </summary>
     public class ValidateRequired : ValidationRule
     {
 
