@@ -11,5 +11,6 @@ namespace WIC.Entities
         Yes,
         No,
         Incomplete,
+        InProgress
     }
 }

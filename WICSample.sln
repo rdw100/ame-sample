@@ -36,6 +36,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design", "Design", "{E5AAB780-1480-4E72-AA39-9EBC63F31669}"
 	ProjectSection(SolutionItems) = preProject
 		Domain.xlsx = Domain.xlsx
+		LayeredArchitectureTechMap.pdf = LayeredArchitectureTechMap.pdf
+		Mockups.pdf = Mockups.pdf
+		UseCase.pdf = UseCase.pdf
 	EndProjectSection
 EndProject
 Global

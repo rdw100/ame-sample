@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Architecture.pptx
+/Mockups.bmpr
+/UseCase.uxf
