@@ -44,13 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MemberController.cs" />
+    <Compile Include="MemberProcessComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\WIC.Entities\WIC.Entities.csproj">
       <Project>{20d751c9-2819-4572-b05c-007d92b19c62}</Project>
       <Name>WIC.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WIC.Framework\WIC.Framework.csproj">
+      <Project>{bfae8bad-7c15-44c1-81d1-eda86ec83476}</Project>
+      <Name>WIC.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WIC.Services\WIC.Services.csproj">
+      <Project>{4FA32B13-4F57-4BCB-BE1A-533524A150F8}</Project>
+      <Name>WIC.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

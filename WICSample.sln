@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design", "Design", "{E5AAB7
 		UseCase.pdf = UseCase.pdf
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIC.UI.MVC", "WIC.UI.MVC\WIC.UI.MVC.csproj", "{BB954061-0378-4612-B48D-F0844B3D4E16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{BFAE8BAD-7C15-44C1-81D1-EDA86EC83476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFAE8BAD-7C15-44C1-81D1-EDA86EC83476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFAE8BAD-7C15-44C1-81D1-EDA86EC83476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB954061-0378-4612-B48D-F0844B3D4E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB954061-0378-4612-B48D-F0844B3D4E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB954061-0378-4612-B48D-F0844B3D4E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB954061-0378-4612-B48D-F0844B3D4E16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +105,7 @@ Global
 		{4FDFFBCC-4F7B-44F0-9BF3-74A7E8F862BD} = {9E6ED3C0-201D-44AB-B757-FA6C57D37E62}
 		{54AD056E-4025-4052-A0CB-65FD44942465} = {3F6CC53A-AFDA-4721-A5BF-431B368122F8}
 		{BFAE8BAD-7C15-44C1-81D1-EDA86EC83476} = {88A04D78-B2E5-41F9-9EA5-5077A294E710}
+		{BB954061-0378-4612-B48D-F0844B3D4E16} = {3F6CC53A-AFDA-4721-A5BF-431B368122F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45

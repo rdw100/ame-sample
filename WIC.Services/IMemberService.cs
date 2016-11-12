@@ -21,6 +21,13 @@ namespace WIC.Services.Contracts
         [OperationContract]
         void UpdateMember(Member member);
 
-        //Member GetMemberById(Guid memberId);
+        [OperationContract]
+        List<Member> ListMembers();
+
+        [OperationContract]
+        Member GetMemberById(int memberId);
+
+        [OperationContract]
+        void DeleteMember(int memberID);
     }
 }

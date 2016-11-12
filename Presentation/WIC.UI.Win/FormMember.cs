@@ -23,7 +23,7 @@ namespace WIC.UI.Win
         public FormMember()
         {
             InitializeComponent();
-            InitializeApply();
+            InitializeProcessComponent();
 
             // Initialize Member presenter.
             memberPresenter = new MemberPresenter(this);
@@ -104,10 +104,9 @@ namespace WIC.UI.Win
             this.Close();
         }
 
-        private void InitializeApply()
-        {
-            // Todo: Better incorporate list lookup into View and Presenter.  Consider StateCollection : List<State>.
-            cboState.DataSource = MemberController.GetStates();
+        private void InitializeProcessComponent()
+        {            
+            cboState.DataSource = MemberProcessComponent.GetStates();
         }
     }
 }

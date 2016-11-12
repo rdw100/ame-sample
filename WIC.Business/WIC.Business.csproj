@@ -44,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MemberComponent.cs" />
-    <Compile Include="IncomeComponent.cs" />
+    <Compile Include="MemberBusinessComponent.cs" />
+    <Compile Include="IncomeBusinessComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

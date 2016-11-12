@@ -8,7 +8,7 @@ using WIC.Entities;
 
 namespace WIC.Business
 {
-    public class IncomeComponent
+    public class IncomeBusinessComponent
     {
 
         /// <summary>
@@ -16,7 +16,7 @@ namespace WIC.Business
         /// in determining the income eligibility of persons applying to participate in the WIC Program. 
         /// </summary>
         /// <param name="member">The applicant member.</param>
-        /// <returns>Returns a Leave object.</returns>
+        /// <returns>Returns a Member object.</returns>
         /// <seealso cref="http://www.fns.usda.gov/wic/wic-income-eligibility-guidelines"/>
         /// <remarks>http://www.dofactory.com/net/facade-design-pattern</remarks>
         public bool IsEligible(Member member, int amount)

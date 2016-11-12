@@ -36,6 +36,7 @@ namespace WIC.Entities
             AddRule(new ValidateLength("Zip", 1, 5));
             //AddRule(new ValidateZip("Zip"));
         }
+        public int MemberID { get; set; }
         public string City { get; set; }      
         public string State { get; set; }          
         public string Address { get; set; }

@@ -14,6 +14,28 @@ namespace WIC.Data
     public class MemberDAC : DataAccessComponent, IMemberDAC
     {
         /// <summary>
+        /// Deletes an existing row in the Members table.
+        /// </summary>
+        /// <param name="memberID">A Member entity object.</param>
+        public void DeleteMember(int memberID)
+        {
+            const string SQL_STATEMENT =
+                "Delete FROM dbo.Members " +
+                "WHERE [MemberId]=@MemberId ";
+
+            // Connect to database.
+            Database db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            {
+                // Set parameter values.
+                db.AddInParameter(cmd, "@MemberId", DbType.AnsiString, memberID);
+ 
+                // Execute SQL.
+                db.ExecuteNonQuery(cmd);
+            }
+        }
+
+        /// <summary>
         /// Inserts a new row in the Members table.
         /// </summary>
         /// <param name="member">A Member object.</param>
@@ -82,5 +104,87 @@ namespace WIC.Data
             }
         }
 
+        public List<Member> ListMembers()
+        {
+            const string SQL_STATEMENT =
+                "SELECT *" +
+                "FROM dbo.MEMBERS";
+
+            List<Member> result = new List<Member>();
+
+            // Connect to database.
+            Database db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            {
+                using (IDataReader dr = db.ExecuteReader(cmd))
+                {
+                    while (dr.Read())
+                    {
+                        // Create a new member.
+                        Member member = LoadMember(dr);
+
+                        // Add to List.
+                        result.Add(member);
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Creates a new Member from a Datareader.
+        /// </summary>
+        /// <param name="dr">A DataReader object.</param>
+        /// <returns>Returns a Member.</returns>		
+        private Member LoadMember(IDataReader dr)
+        {
+            // Create a new Member.
+            Member member = new Member();
+
+            // Read values.
+            member.MemberID = base.GetDataValue<int>(dr, "MemberID");
+            member.FirstName = base.GetDataValue<string>(dr, "FirstName");
+            member.LastName = base.GetDataValue<string>(dr, "LastName");
+            member.Address = base.GetDataValue<string>(dr, "Address");
+            member.City = base.GetDataValue<string>(dr, "City");
+            member.State = base.GetDataValue<string>(dr, "State");
+            member.Zip = base.GetDataValue<string>(dr, "Zip");
+
+            return member;
+        }
+
+        /// <summary>
+        /// GetMemberById business method. 
+        /// </summary>
+        /// <param name="memberID">A memberID value.</param>
+        /// <returns>Returns a Member object.</returns>
+        public Member GetMemberById(int memberID)
+        {
+            const string SQL_STATEMENT =
+                "SELECT [MemberID], [FirstName], [LastName], [Address], [City], [State], [ZIP] " +
+                "FROM dbo.Members " +
+                "WHERE [MemberID]=@MemberID ";
+
+            Member member = null;
+
+            // Connect to database.
+            Database db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            {
+                db.AddInParameter(cmd, "@MemberID", DbType.Int64, memberID);
+
+                using (IDataReader dr = db.ExecuteReader(cmd))
+                {
+                    if (dr.Read())
+                    {
+                        // Create a new Member
+                        member = LoadMember(dr);
+                    }
+                }
+            }
+
+            return member;
+        }
     }
 }

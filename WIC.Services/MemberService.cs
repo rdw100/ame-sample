@@ -14,14 +14,40 @@ namespace WIC.Services
     {       
         public void InsertMember(Member member)
         {
-            MemberComponent bc = new MemberComponent();
+            MemberBusinessComponent bc = new MemberBusinessComponent();
             bc.InsertMember(member);
         }
 
         public void UpdateMember(Member member)
         {
-            MemberComponent bc = new MemberComponent();
+            MemberBusinessComponent bc = new MemberBusinessComponent();
             bc.UpdateMember(member);
         }
+
+        public List<Member> ListMembers()
+        {
+            List<Member> result = new List<Member>();
+            MemberBusinessComponent bc = new MemberBusinessComponent();
+            result = bc.ListMembers();
+            return result;
+        }
+
+        /// <summary>
+        /// Calls the GetMemberById business method of the MemberComponent.
+        /// </summary>
+        /// <param name="memberID"> A memberID value.</param>
+        /// <returns>Returns a Member object.</returns>
+        public Member GetMemberById(int memberID)
+        {
+            MemberBusinessComponent bc = new MemberBusinessComponent();
+            return bc.GetMemberById(memberID);
+        }
+
+        public void DeleteMember(int memberID)
+        {
+            MemberBusinessComponent bc = new MemberBusinessComponent();
+            bc.DeleteMember(memberID);
+        }
+
     }
 }
