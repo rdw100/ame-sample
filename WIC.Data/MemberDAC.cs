@@ -16,7 +16,7 @@ namespace WIC.Data
         /// <summary>
         /// Deletes an existing row in the Members table.
         /// </summary>
-        /// <param name="memberID">A Member entity object.</param>
+        /// <param name="memberID">A Member entity object ID.</param>
         public void DeleteMember(int memberID)
         {
             const string SQL_STATEMENT =
@@ -82,8 +82,8 @@ namespace WIC.Data
                     "[FirstName]=@FirstName, " +
                     "[LastName]=@LastName, " +
                     "[Address]=@Address, " +
-                    "[City]=@City " +
-                    "[State]=@State " +
+                    "[City]=@City, " +
+                    "[State]=@State, " +
                     "[ZIP]=@ZIP " +
                 "WHERE [MemberId]=@MemberId ";
 
@@ -98,12 +98,17 @@ namespace WIC.Data
                 db.AddInParameter(cmd, "@City", DbType.AnsiString, member.City);
                 db.AddInParameter(cmd, "@State", DbType.AnsiString, member.State);
                 db.AddInParameter(cmd, "@ZIP", DbType.AnsiString, member.Zip);
+                db.AddInParameter(cmd, "@MemberId", DbType.AnsiString, member.MemberID);
 
                 // Execute SQL.
                 db.ExecuteNonQuery(cmd);
             }
         }
 
+        /// <summary>
+        /// Lists members.
+        /// </summary>
+        /// <returns>Returns all members.</returns>
         public List<Member> ListMembers()
         {
             const string SQL_STATEMENT =
@@ -143,13 +148,13 @@ namespace WIC.Data
             Member member = new Member();
 
             // Read values.
-            member.MemberID = base.GetDataValue<int>(dr, "MemberID");
-            member.FirstName = base.GetDataValue<string>(dr, "FirstName");
-            member.LastName = base.GetDataValue<string>(dr, "LastName");
-            member.Address = base.GetDataValue<string>(dr, "Address");
-            member.City = base.GetDataValue<string>(dr, "City");
-            member.State = base.GetDataValue<string>(dr, "State");
-            member.Zip = base.GetDataValue<string>(dr, "Zip");
+            member.MemberID = GetDataValue<int>(dr, "MemberID");
+            member.FirstName = GetDataValue<string>(dr, "FirstName");
+            member.LastName = GetDataValue<string>(dr, "LastName");
+            member.Address = GetDataValue<string>(dr, "Address");
+            member.City = GetDataValue<string>(dr, "City");
+            member.State = GetDataValue<string>(dr, "State");
+            member.Zip = GetDataValue<string>(dr, "Zip");
 
             return member;
         }

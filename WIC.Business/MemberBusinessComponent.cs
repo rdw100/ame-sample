@@ -16,6 +16,11 @@ namespace WIC.Business
     /// <remarks>See Designing Business Components <a href="https://msdn.microsoft.com/en-us/library/ee658102.aspx">here</a></remarks>
     public class MemberBusinessComponent
     {
+        /// <summary>
+        /// Returns a single member object.
+        /// </summary>
+        /// <param name="memberID"></param>
+        /// <returns></returns>
         public Member GetMemberById(int memberID)
         {
             // Member result = new Member();
@@ -23,8 +28,8 @@ namespace WIC.Business
 
             // Data Access component declarations.
             var memberDAC = new MemberDAC();
-
             result = memberDAC.GetMemberById(memberID);
+
             return result;
         }
 
@@ -65,12 +70,15 @@ namespace WIC.Business
             memberDAC.UpdateMember(member);
         }
 
+        /// <summary>
+        /// Deletes a single member object.
+        /// </summary>
+        /// <param name="memberID"></param>
         public void DeleteMember(int memberID)
         {
             // // Data Access component declarations.
             var memberDAC = new MemberDAC();
             memberDAC.DeleteMember(memberID);
         }
-
     }
 }

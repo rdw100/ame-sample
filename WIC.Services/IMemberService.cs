@@ -10,7 +10,7 @@ using WIC.Entities;
 namespace WIC.Services.Contracts
 {
     /// <summary>
-    /// Defines contract for single Member interface.
+    /// Defines contract for single Member service interface.
     /// </summary>
     [ServiceContract]
     public interface IMemberService
@@ -29,5 +29,5 @@ namespace WIC.Services.Contracts
 
         [OperationContract]
         void DeleteMember(int memberID);
-    }
+     }
 }

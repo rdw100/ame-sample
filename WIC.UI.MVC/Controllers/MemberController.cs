@@ -24,7 +24,14 @@ namespace WIC.UI.MVC.Controllers
         // GET: Member/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var upc = new MemberProcessComponent();
+            Member member = upc.GetMemberById(id);
+
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
+            return View(member);
         }
 
         // GET: Member/Create
@@ -53,35 +60,34 @@ namespace WIC.UI.MVC.Controllers
         // GET: Member/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var upc = new MemberProcessComponent();
+            Member member = upc.GetMemberById(id);
+
+            if (member == null)
+            {
+                return HttpNotFound();
+            }
+            
+            return View(member);
         }
 
-        // POST: Member/Edit/5
+        // POST: Member/Edit/5 //(int id, FormCollection collection)
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit([Bind(Include = "MemberId,FirstName,LastName,Address,City,State,ZIP")] Member member)
         {
-            try
-            {
-                // TODO: Add update logic here
+            // TODO: Add update logic here
+            var upc = new MemberProcessComponent();
+            upc.UpdateMember(member);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
 
         // GET: Member/Delete/5
         public ActionResult Delete(int id)
         {
             var upc = new MemberProcessComponent();
-
-            //if (id == null)
-            //{
-            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            //}
             Member member = upc.GetMemberById(id);
+
             if (member == null)
             {
                 return HttpNotFound();

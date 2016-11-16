@@ -29,11 +29,19 @@ namespace WIC.UI.Process
             return result;
         }
 
+        /// <summary>
+        /// Describes available states.
+        /// </summary>
+        /// <returns>A set of named State constants.</returns>
         public static string[] GetStates()
         {
-            return Enum.GetNames(typeof(States));
+            return Enum.GetNames(typeof(State));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public List<Member> ListMembers()
         {
             List<Member> result = default(List<Member>);
@@ -43,11 +51,26 @@ namespace WIC.UI.Process
             return result;
         }
 
+        /// <summary>
+        /// Deletes a single member.
+        /// </summary>
+        /// <param name="memberID">A Member entity object ID.</param>
         public void DeleteMember(int memberID)
         {
             MemberService service = new MemberService();
 
             service.DeleteMember(memberID);
+        }
+
+        /// <summary>
+        /// Updates a single member.
+        /// </summary>
+        /// <param name="member">A Member entity object.</param>
+        public void UpdateMember(Member member)
+        {
+            MemberService service = new MemberService();
+
+            service.UpdateMember(member);
         }
     }
 }
