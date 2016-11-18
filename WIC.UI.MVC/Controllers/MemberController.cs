@@ -36,18 +36,19 @@ namespace WIC.UI.MVC.Controllers
 
         // GET: Member/Create
         public ActionResult Create()
-        {
-            
+        {            
             return View();
         }
 
         // POST: Member/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create([Bind(Include = "FirstName,LastName,Address,City,State,ZIP")] Member member)
         {
             try
             {
                 // TODO: Add insert logic here
+                var upc = new MemberProcessComponent();
+                upc.InsertMember(member);
 
                 return RedirectToAction("Index");
             }
@@ -71,7 +72,7 @@ namespace WIC.UI.MVC.Controllers
             return View(member);
         }
 
-        // POST: Member/Edit/5 //(int id, FormCollection collection)
+        // POST: Member/Edit/5 
         [HttpPost]
         public ActionResult Edit([Bind(Include = "MemberId,FirstName,LastName,Address,City,State,ZIP")] Member member)
         {

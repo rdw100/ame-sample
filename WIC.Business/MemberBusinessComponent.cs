@@ -17,38 +17,6 @@ namespace WIC.Business
     public class MemberBusinessComponent
     {
         /// <summary>
-        /// Returns a single member object.
-        /// </summary>
-        /// <param name="memberID"></param>
-        /// <returns></returns>
-        public Member GetMemberById(int memberID)
-        {
-            // Member result = new Member();
-            Member result = default(Member);
-
-            // Data Access component declarations.
-            var memberDAC = new MemberDAC();
-            result = memberDAC.GetMemberById(memberID);
-
-            return result;
-        }
-
-        /// <summary>
-        /// Lists member objects.
-        /// </summary>
-        /// <returns>Returns a list of Members.</returns>
-        public List<Member> ListMembers()
-        {
-            List<Member> result = new List<Member>();
-
-            // Data Access component declarations.
-            var memberDAC = new MemberDAC();
-            result = memberDAC.ListMembers();
-
-            return result;
-        }
-
-        /// <summary>
         /// Inserts member using data access.
         /// </summary>
         /// <param name="member"></param>
@@ -79,6 +47,38 @@ namespace WIC.Business
             // // Data Access component declarations.
             var memberDAC = new MemberDAC();
             memberDAC.DeleteMember(memberID);
+        }      
+        
+        /// <summary>
+        /// Lists member objects.
+        /// </summary>
+        /// <returns>Returns a list of Members.</returns>
+        public List<Member> ListMembers()
+        {
+            List<Member> result = new List<Member>();
+
+            // Data Access component declarations.
+            var memberDAC = new MemberDAC();
+            result = memberDAC.ListMembers();
+
+            return result;
+        }
+
+        /// <summary>
+        /// Returns a single member object.
+        /// </summary>
+        /// <param name="memberID"></param>
+        /// <returns></returns>
+        public Member GetMemberById(int memberID)
+        {
+            // Member result = new Member();
+            Member result = default(Member);
+
+            // Data Access component declarations.
+            var memberDAC = new MemberDAC();
+            result = memberDAC.GetMemberById(memberID);
+
+            return result;
         }
     }
 }

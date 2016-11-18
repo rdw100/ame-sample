@@ -16,6 +16,52 @@ namespace WIC.UI.Process
     public class MemberProcessComponent
     {
         /// <summary>
+        /// Inserts a single member.
+        /// </summary>
+        /// <param name="member">A Member entity object.</param>
+        public void InsertMember(Member member)
+        {
+            MemberService service = new MemberService();
+
+            service.InsertMember(member);
+        }
+
+        /// <summary>
+        /// Updates a single member.
+        /// </summary>
+        /// <param name="member">A Member entity object.</param>
+        public void UpdateMember(Member member)
+        {
+            MemberService service = new MemberService();
+
+            service.UpdateMember(member);
+        }
+
+        /// <summary>
+        /// Deletes a single member.
+        /// </summary>
+        /// <param name="memberID">A Member entity object ID.</param>
+        public void DeleteMember(int memberID)
+        {
+            MemberService service = new MemberService();
+
+            service.DeleteMember(memberID);
+        }
+
+        /// <summary>
+        /// Lists member objects.
+        /// </summary>
+        /// <returns>Returns a list of Members.</returns>
+        public List<Member> ListMembers()
+        {
+            List<Member> result = default(List<Member>);
+            MemberService service = new MemberService();
+
+            result = service.ListMembers();
+            return result;
+        }
+
+        /// <summary>
         /// Calls the GetMemberById operation method in the MemberService.
         /// </summary>
         /// <param name="memberID">A memberID value.</param>
@@ -36,41 +82,6 @@ namespace WIC.UI.Process
         public static string[] GetStates()
         {
             return Enum.GetNames(typeof(State));
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public List<Member> ListMembers()
-        {
-            List<Member> result = default(List<Member>);
-            MemberService service = new MemberService();
-
-            result = service.ListMembers();
-            return result;
-        }
-
-        /// <summary>
-        /// Deletes a single member.
-        /// </summary>
-        /// <param name="memberID">A Member entity object ID.</param>
-        public void DeleteMember(int memberID)
-        {
-            MemberService service = new MemberService();
-
-            service.DeleteMember(memberID);
-        }
-
-        /// <summary>
-        /// Updates a single member.
-        /// </summary>
-        /// <param name="member">A Member entity object.</param>
-        public void UpdateMember(Member member)
-        {
-            MemberService service = new MemberService();
-
-            service.UpdateMember(member);
         }
     }
 }
