@@ -38,7 +38,7 @@ namespace WIC.Entities
         }
         public int MemberID { get; set; }
         public string City { get; set; }      
-        public string State { get; set; }          
+        public State State { get; set; }          
         public string Address { get; set; }
         public string Zip { get; set; }        
     }

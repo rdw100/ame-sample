@@ -153,8 +153,11 @@ namespace WIC.Data
             member.LastName = GetDataValue<string>(dr, "LastName");
             member.Address = GetDataValue<string>(dr, "Address");
             member.City = GetDataValue<string>(dr, "City");
-            member.State = GetDataValue<string>(dr, "State");
             member.Zip = GetDataValue<string>(dr, "Zip");
+
+            // Convert string data from DR to enum constant.  Not ideal performance.
+            State state = (State)Enum.Parse(typeof(State), GetDataValue<string>(dr, "State"), true);
+            member.State = state;
 
             return member;
         }
