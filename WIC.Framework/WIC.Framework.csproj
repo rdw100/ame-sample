@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="ValidationObject.cs" />
     <Compile Include="ValidationRules\ValidateRequired.cs" />
     <Compile Include="ValidationRules\ValidateZip.cs" />
