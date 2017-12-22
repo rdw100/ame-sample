@@ -19,7 +19,7 @@ namespace WIC.UI.Win
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
-            Application.Run(new FormMember());
+            Application.Run(new BMICalculator());
         }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+
 /// <summary>
 /// Calculates BMI (uses Pounds and inches)
 /// </summary>
@@ -35,6 +37,6 @@ public class BodyMassIndex
     /// </remarks>
     public void CalculateBMI()
     {
-        bmi = weight / (height ^ 2) * 703;
+        bmi = weight / Math.Pow(height, 2) * 703;
     }
 }

@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BodyMassIndex.cs" />
     <Compile Include="EnumHelper.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="ValidationObject.cs" />
