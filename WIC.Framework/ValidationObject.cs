@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WIC.Framework.ValidationRules;
+using AME.Framework.ValidationRules;
 
-namespace WIC.Framework
+namespace AME.Framework
 {
     // abstract validation object class
     // ** Enterprise Design Pattern: Domain Model

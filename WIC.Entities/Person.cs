@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WIC.Framework;
+using AME.Framework;
 
-namespace WIC.Entities
+namespace AME.Entities
 {
     /// <summary>
     /// Base class for all program participants: women, infants, and children.

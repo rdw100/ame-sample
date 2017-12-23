@@ -1,4 +1,4 @@
-﻿namespace WIC.UI.Win
+﻿namespace AME.UI.Win
 {
     partial class Main
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using WIC.UI.Win.Models;
-using WIC.UI.Win.Views;
+using AME.UI.Win.Models;
+using AME.UI.Win.Views;
 
-namespace WIC.UI.Win
+namespace AME.UI.Win
 {
     static class Program
     {

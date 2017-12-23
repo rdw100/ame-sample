@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WIC.Framework;
-using WIC.Framework.ValidationRules;
+using AME.Framework;
+using AME.Framework.ValidationRules;
 
-namespace WIC.Entities
+namespace AME.Entities
 {
     /// <summary>
     /// Household member class implements common elements from base class.  Cannot be inherited at this time.

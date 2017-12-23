@@ -7,10 +7,10 @@ using System.Data;
 using System.Data.Common;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 
-using WIC.Entities;
-using WIC.Framework;
+using AME.Entities;
+using AME.Framework;
 
-namespace WIC.Data
+namespace AME.Data
 {
     public class MemberDAC : DataAccessComponent, IMemberDAC
     {

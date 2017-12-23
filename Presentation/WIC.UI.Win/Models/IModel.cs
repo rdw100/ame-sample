@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WIC.UI.Win.Models;
+using AME.UI.Win.Models;
 
-namespace WIC.UI.Win.Models
+namespace AME.UI.Win.Models
 {
     // IModel interface, part of MVP design pattern. 
     public interface IModel

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WIC.UI.Win.Properties
+namespace AME.UI.Win.Properties
 {
 
 

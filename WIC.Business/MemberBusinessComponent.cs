@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WIC.Data;
-using WIC.Entities;
+using AME.Data;
+using AME.Entities;
 
-namespace WIC.Business
+namespace AME.Business
 {
     /// <summary>
     /// Member business logic component encapsulates the business logic and application state.

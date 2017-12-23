@@ -2,10 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using AutoMapper;
-using WIC.Entities;
-using WIC.UI.Win.Models;
+using AME.Entities;
+using AME.UI.Win.Models;
 
-namespace WIC.Tests.Presentation
+namespace AME.Tests.Presentation
 {
     /// <summary>
     /// Test model mapping to entity model.

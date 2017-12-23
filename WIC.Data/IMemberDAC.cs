@@ -1,6 +1,6 @@
-﻿using WIC.Entities;
+﻿using AME.Entities;
 
-namespace WIC.Data
+namespace AME.Data
 {
     public interface IMemberDAC
     {

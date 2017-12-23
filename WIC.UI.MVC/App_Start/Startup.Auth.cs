@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using WIC.UI.MVC.Models;
+using AME.UI.MVC.Models;
 
-namespace WIC.UI.MVC
+namespace AME.UI.MVC
 {
     public partial class Startup
     {

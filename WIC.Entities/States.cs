@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WIC.Entities
+namespace AME.Entities
 {
     /// <summary>
     /// Describes available US States.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WIC.Entities
+namespace AME.Entities
 {
     public enum CertifiedStatus: byte
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WIC.UI.Win.Models;
-using WIC.UI.Win.Views;
+using AME.UI.Win.Models;
+using AME.UI.Win.Views;
 
-namespace WIC.UI.Win.Presenters
+namespace AME.UI.Win.Presenters
 {
     /// <summary>
     /// Base class for all presenter classes. Keeps track of Model and View classes.

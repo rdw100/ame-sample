@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WIC.Business;
-using WIC.Entities;
-using WIC.Services.Contracts;
+using AME.Business;
+using AME.Entities;
+using AME.Services.Contracts;
 
-namespace WIC.Services
+namespace AME.Services
 {
     public class MemberService : IMemberService
     {

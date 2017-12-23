@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WIC.Entities;
+using AME.Entities;
 
-namespace WIC.Business
+namespace AME.Business
 {
     public class IncomeBusinessComponent
     {

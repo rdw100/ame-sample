@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WIC.Framework.ValidationRules
+namespace AME.Framework.ValidationRules
 {
     /// <summary>
     /// Maintains property name to which validation rule applies and validation error message.

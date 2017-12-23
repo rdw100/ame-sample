@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 
-using WIC.Entities;
+using AME.Entities;
 
-namespace WIC.Services.Contracts
+namespace AME.Services.Contracts
 {
     /// <summary>
     /// Defines contract for single Member service interface.

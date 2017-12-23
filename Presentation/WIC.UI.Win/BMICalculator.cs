@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using WIC.Framework;
+using AME.Framework;
 
-namespace WIC.UI.Win
+namespace AME.UI.Win
 {
     public partial class BMICalculator : Form
     {

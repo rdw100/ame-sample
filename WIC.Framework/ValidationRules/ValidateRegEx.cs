@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace WIC.Framework.ValidationRules
+namespace AME.Framework.ValidationRules
 {
     /// <summary>
     /// Validated regex bases rules.

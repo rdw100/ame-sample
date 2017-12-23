@@ -8,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using WIC.UI.Win.Presenters;
-using WIC.UI.Win.Views;
+using AME.UI.Win.Presenters;
+using AME.UI.Win.Views;
 
-namespace WIC.UI.Win
+namespace AME.UI.Win
 {
     public partial class Main : Form
     {

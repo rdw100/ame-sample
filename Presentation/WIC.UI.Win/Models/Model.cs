@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 using AutoMapper;
-using WIC.Entities;
-using WIC.Services;
+using AME.Entities;
+using AME.Services;
 
-namespace WIC.UI.Win.Models
+namespace AME.UI.Win.Models
 {
     public class Model : IModel
     {

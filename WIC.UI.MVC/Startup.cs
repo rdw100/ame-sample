@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(WIC.UI.MVC.Startup))]
-namespace WIC.UI.MVC
+[assembly: OwinStartupAttribute(typeof(AME.UI.MVC.Startup))]
+namespace AME.UI.MVC
 {
     public partial class Startup
     {

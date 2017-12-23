@@ -2,7 +2,7 @@
 using System.Data;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 
-namespace WIC.Data
+namespace AME.Data
 {
     /// <summary>
     /// Base data access component class.

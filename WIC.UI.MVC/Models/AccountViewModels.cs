@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WIC.UI.MVC.Models
+namespace AME.UI.MVC.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

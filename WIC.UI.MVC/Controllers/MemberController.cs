@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using WIC.Entities;
-using WIC.UI.Process;
-using WIC.Framework;
+using AME.Entities;
+using AME.UI.Process;
+using AME.Framework;
 
-namespace WIC.UI.MVC.Controllers
+namespace AME.UI.MVC.Controllers
 {
     public class MemberController : Controller
     {

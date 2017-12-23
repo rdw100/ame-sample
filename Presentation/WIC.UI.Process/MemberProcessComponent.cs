@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WIC.Entities;
-using WIC.Services;
+using AME.Entities;
+using AME.Services;
 
-namespace WIC.UI.Process
+namespace AME.UI.Process
 {
     /// <summary>
     /// User Process Components used to abstract tasks from the UI used as a Controllers.  Entities serve as a model.

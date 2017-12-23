@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WIC.Framework
+namespace AME.Framework
 {
     /// <summary>
     /// Provides a utility class for enumerations.

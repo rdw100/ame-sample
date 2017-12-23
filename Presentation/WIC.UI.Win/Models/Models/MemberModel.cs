@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WIC.UI.Win.Models
+namespace AME.UI.Win.Models
 {
     public class MemberModel
     {
