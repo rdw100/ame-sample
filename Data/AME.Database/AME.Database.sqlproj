@@ -12,8 +12,8 @@
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>WIC.Database</RootNamespace>
-    <AssemblyName>WIC.Database</AssemblyName>
+    <RootNamespace>AME.Database</RootNamespace>
+    <AssemblyName>AME.Database</AssemblyName>
     <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>

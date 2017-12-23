@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8B1AC17-0F2E-4C1E-9B86-4441607E4DA3}</ProjectGuid>
+    <ProjectGuid>{BFAE8BAD-7C15-44C1-81D1-EDA86EC83476}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WIC.Data</RootNamespace>
-    <AssemblyName>WIC.Data</AssemblyName>
+    <RootNamespace>AME.Framework</RootNamespace>
+    <AssemblyName>AME.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -34,14 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,20 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccessComponent.cs" />
-    <Compile Include="IMemberDAC.cs" />
-    <Compile Include="MemberDAC.cs" />
+    <Compile Include="BodyMassIndex.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="ValidationObject.cs" />
+    <Compile Include="ValidationRules\ValidateRequired.cs" />
+    <Compile Include="ValidationRules\ValidateZip.cs" />
+    <Compile Include="ValidationRules\ValidationRule.cs" />
+    <Compile Include="ValidationRules\ValidateLength.cs" />
+    <Compile Include="ValidationRules\ValidateRegEx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WIC.Entities\AME.Entities.csproj">
-      <Project>{20d751c9-2819-4572-b05c-007d92b19c62}</Project>
-      <Name>AME.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WIC.Framework\AME.Framework.csproj">
-      <Project>{bfae8bad-7c15-44c1-81d1-eda86ec83476}</Project>
-      <Name>AME.Framework</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

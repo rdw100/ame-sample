@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BFC4893-7FBE-40EE-8584-F64CFC04FC4A}</ProjectGuid>
+    <ProjectGuid>{4FA32B13-4F57-4BCB-BE1A-533524A150F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WIC.Business</RootNamespace>
-    <AssemblyName>WIC.Business</AssemblyName>
+    <RootNamespace>AME.Services</RootNamespace>
+    <AssemblyName>AME.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,16 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MemberBusinessComponent.cs" />
-    <Compile Include="IncomeBusinessComponent.cs" />
+    <Compile Include="IMemberService.cs" />
+    <Compile Include="MemberService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WIC.Data\AME.Data.csproj">
-      <Project>{f8b1ac17-0f2e-4c1e-9b86-4441607e4da3}</Project>
-      <Name>AME.Data</Name>
+    <ProjectReference Include="..\AME.Business\AME.Business.csproj">
+      <Project>{4bfc4893-7fbe-40ee-8584-f64cfc04fc4a}</Project>
+      <Name>AME.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WIC.Entities\AME.Entities.csproj">
+    <ProjectReference Include="..\AME.Entities\AME.Entities.csproj">
       <Project>{20d751c9-2819-4572-b05c-007d92b19c62}</Project>
       <Name>AME.Entities</Name>
     </ProjectReference>

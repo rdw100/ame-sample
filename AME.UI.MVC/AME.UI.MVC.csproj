@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WIC.UI.MVC</RootNamespace>
-    <AssemblyName>WIC.UI.MVC</AssemblyName>
+    <RootNamespace>AME.UI.MVC</RootNamespace>
+    <AssemblyName>AME.UI.MVC</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -256,15 +256,15 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Presentation\WIC.UI.Process\AME.UI.Process.csproj">
+    <ProjectReference Include="..\Presentation\AME.UI.Process\AME.UI.Process.csproj">
       <Project>{54ad056e-4025-4052-a0cb-65fd44942465}</Project>
       <Name>AME.UI.Process</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WIC.Entities\AME.Entities.csproj">
+    <ProjectReference Include="..\AME.Entities\AME.Entities.csproj">
       <Project>{20D751C9-2819-4572-B05C-007D92B19C62}</Project>
       <Name>AME.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WIC.Framework\AME.Framework.csproj">
+    <ProjectReference Include="..\AME.Framework\AME.Framework.csproj">
       <Project>{BFAE8BAD-7C15-44C1-81D1-EDA86EC83476}</Project>
       <Name>AME.Framework</Name>
     </ProjectReference>
