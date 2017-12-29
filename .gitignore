@@ -246,4 +246,6 @@ ModelManifest.xml
 /Architecture.pptx
 /Mockups.bmpr
 /UseCase.uxf
-/Data/WIC.Database/WIC.Database.jfm
+/Data/AME.Database/AME.Database.jfm
+/AME.Data/desktop.ini
+*.jfm
