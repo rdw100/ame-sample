@@ -21,6 +21,25 @@ namespace AME.UI.MVC.Controllers
             return View(member.ToList());
         }
 
+        // Post: Member
+        [HttpPost]
+        public ActionResult Index(string filterBy, string filterText)
+        {
+            var upc = new MemberProcessComponent();
+            List<Member> member = upc.ListMembers();
+
+            if (filterBy == "lastName" && !string.IsNullOrEmpty(filterText))
+            {
+                return View(member.Where(x => x.LastName.Contains(filterText)).ToList());
+            }
+            else if (filterBy == "firstName" && !string.IsNullOrEmpty(filterText))
+            {
+                return View(member.Where(x => x.FirstName.Contains(filterText)).ToList());
+            }
+
+            return View(member.ToList());
+        }
+
         // GET: Member/Details/5
         public ActionResult Details(int id)
         {
